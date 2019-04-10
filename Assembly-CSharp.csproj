@@ -62,7 +62,6 @@
   <ItemGroup>
     <Compile Include="Assets\02.Scripts\Blacksmith.cs" />
     <Compile Include="Assets\02.Scripts\BlessedWater.cs" />
-    <Compile Include="Assets\02.Scripts\ButtonManager.cs" />
     <Compile Include="Assets\02.Scripts\Commission.cs" />
     <Compile Include="Assets\02.Scripts\GameManager.cs" />
     <Compile Include="Assets\02.Scripts\PlayerClick.cs" />
@@ -70,6 +69,7 @@
     <Compile Include="Assets\02.Scripts\ReinforcementWater.cs" />
     <Compile Include="Assets\02.Scripts\Ston.cs" />
     <Compile Include="Assets\02.Scripts\SuccessPercentage.cs" />
+    <Compile Include="Assets\02.Scripts\UIManager.cs" />
     <Compile Include="Assets\02.Scripts\Weapon.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>/Users/jeonghunkim/Documents/UnityProject/ReinforceTutorial/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
