@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
     public GameObject failUI;
     public Text priceText;
 
-    public Weapon weapon;
+    private Weapon weapon;
     public Ston ston;
 
     public SuccessPercentage successPercentage;
@@ -26,24 +26,19 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        weapon = GetComponent<Weapon>();
-        ston = GetComponent<Ston>();
+        weapon = GameObject.Find("Weapon").GetComponent<Weapon>();
+        ston = GameObject.Find("Reinforce Ston").GetComponent<Ston>();
 
-        successPercentage = GetComponent<SuccessPercentage>();
-        commission = GetComponent<Commission>();
-
-        commission.itemLevel = weapon.itemLevel;
-        commission.weaponRating = weapon.itemRating;
+        successPercentage = this.gameObject.GetComponent<SuccessPercentage>();
+        commission = this.gameObject.GetComponent<Commission>();
 
         successPercentage.itemLevel = weapon.itemLevel;
-        successPercentage.itemReinforceLevel = weapon.itemReinforceLevel;
-        successPercentage.stonLevel = ston.stonLevel;
     }
 
     private void Update()
     {
-        percentage = successPercentage.ReinforceSuccessPercentage();
-        price = commission.ReinforceCommission();
+        percentage = successPercentage.ReinforceSuccessPercentage(weapon.itemReinforceLevel, ston.stonLevel);
+        price = commission.ReinforceCommission(weapon.itemLevel, weapon.itemRating);
 
         priceText.text = price.ToString();
 

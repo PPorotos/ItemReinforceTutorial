@@ -10,14 +10,13 @@ public class SuccessPercentage : MonoBehaviour
     private int evetPercentage = 0;
     private int vipPercentage = 0;
     private int successPercentage;
-    public int itemReinforceLevel;
     public int itemLevel;
-    public int stonLevel;
 
-    public int ReinforceSuccessPercentage()
+
+    public int ReinforceSuccessPercentage(int itemReinforceLevel, int stonLevel)
     {
-        BasicSuccessPercentage();
-        StonCurrection();
+        BasicSuccessPercentage(itemReinforceLevel);
+        StonCurrection(stonLevel);
 
         //강화 성공 확률 = 강화 단계에 따른 기본 성공률 + 강화석과 아이템 레벨 차이에 대한 성공 확률 보정 + 강화수 보정 + 이벤트 보정 + vip 보정 
         successPercentage = basicPercentage + stonPercentage + reinforceWaterPercentage + evetPercentage + vipPercentage;
@@ -25,7 +24,7 @@ public class SuccessPercentage : MonoBehaviour
         return successPercentage;
     }
 
-    private void BasicSuccessPercentage()
+    private void BasicSuccessPercentage(int itemReinforceLevel)
     {
         if(itemReinforceLevel >=1 || itemReinforceLevel <= 3)
         {
@@ -59,7 +58,7 @@ public class SuccessPercentage : MonoBehaviour
             }
         }
     }
-    private void StonCurrection()
+    private void StonCurrection(int stonLevel)
     {
         int levelCheck = itemLevel - stonLevel;
         if (levelCheck >= 10)

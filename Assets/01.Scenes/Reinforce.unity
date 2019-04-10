@@ -3234,8 +3234,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 774aaa43c886d4824b9307b847b14176, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemLevel: 0
-  weaponRating: 
 --- !u!114 &1852611577
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3248,9 +3246,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da8ddd96582614937a9df6d52115743c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemReinforceLevel: 0
   itemLevel: 0
-  stonLevel: 0
 --- !u!114 &1852611578
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3265,7 +3261,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   successUI: {fileID: 669250973}
   failUI: {fileID: 1819826649}
-  priceText: {fileID: 2139018054}
+  priceText: {fileID: 2002784763}
   weapon: {fileID: 1396920904}
   ston: {fileID: 1722955406}
   successPercentage: {fileID: 1852611577}

@@ -4,5 +4,10 @@ using UnityEngine;
 
 public class Ston : MonoBehaviour
 {
-    public int stonLevel = 93;
+    public int stonLevel;
+
+    private void Start()
+    {
+        stonLevel = 93;
+    }
 }

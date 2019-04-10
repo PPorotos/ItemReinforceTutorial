@@ -4,8 +4,13 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
-    public int itemLevel = 100;
-    public int itemReinforceLevel = 2;
+    public int itemLevel;
+    public int itemReinforceLevel;
     public string itemRating = "unique";
 
+    private void Start()
+    {
+        itemLevel = 100;
+        itemReinforceLevel = 2;
+    }
 }
